@@ -1,0 +1,86 @@
+﻿<Window x:Class="Roulette.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Roulette"
+        xmlns:vm="clr-namespace:Roulette.Models"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="Black">
+    <Window.Resources>
+        <vm:MyViewModel x:Key="MyViewModelInstance" />
+    </Window.Resources>
+
+    <Grid Margin="105,53,105,37" x:Name="InterfaceGrid">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+            <Style TargetType="TextBlock" >
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Foreground" Value="AntiqueWhite" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="TextAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="Yu Gothic" />
+            </Style>
+        </Grid.Resources>
+
+        <Viewbox Grid.Column="2" Grid.Row="1" Margin="2"   > <!--WinningBetsPopup-->
+            <Border x:Name="notification_panel" BorderThickness="1" CornerRadius="4" BorderBrush="Gray" Opacity="0">
+                <StackPanel  >
+
+                    <TextBlock x:Name="test1" Text="{Binding Path=WinningBets[0], Mode=OneWay}" FontSize="14" Foreground="{Binding Path=WinningNumberColor}" VerticalAlignment="Top" />
+                    <TextBlock Text="{Binding Path=WinningBets[1], Mode=OneWay}"/>
+                    <TextBlock Text="{Binding Path=WinningBets[2], Mode=OneWay}"/>
+                    <TextBlock Text="{Binding Path=WinningBets[3], Mode=OneWay}"/>
+                    <TextBlock Text="{Binding Path=WinningBets[4], Mode=OneWay}"/>
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <Grid Margin="50,43,50,43" x:Name="RouletteGrid" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2">
+        
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <UniformGrid x:Name="NumbersGrid" Rows="3" Columns="12" Grid.Row="0" Grid.Column="1"/> <!--Numbers-->   
+            <UniformGrid x:Name="DozenBets" Rows="1" Columns="3" Grid.Row="1" Grid.Column="1"/> <!--Dozen Bets-->
+            <UniformGrid x:Name="BottomBets" Rows="1" Columns="6" Grid.Row="2" Grid.Column="1"/> <!--Bottom Bets-->
+            <UniformGrid x:Name="RowBets" Rows="3" Columns="1" Grid.Row="0" Grid.Column="2"/> <!--Row Bets-->
+
+            <Viewbox Grid.Row="0" Grid.Column="0" Stretch="Fill" Margin="-10,3,10,10" >
+                <Grid >
+                    <!--Zero shape-->
+                    <Path x:Name="Zero" Data="M20.4379 26.663C23.2404 11.224 36.6852 0 52.3765 0V0C59.3483 0 65 5.65175 65 12.6235V259C65 266.732 58.732 273 51 273H49.6769C31.6763 273 16.4424 259.704 14.0077 241.869L1.41879 149.648C0.47883 142.763 0.632293 135.772 1.87351 128.934L20.4379 26.663Z" Fill="#26803A"
+                            Canvas.Left="-60" Canvas.Top="-1"></Path>
+                    <TextBlock Text="0" FontSize="28" FontWeight="Bold" Foreground="AntiqueWhite" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" FontFamily="Yu Gothic"/>
+                </Grid>
+            </Viewbox>
+        </Grid>
+        
+    </Grid>
+
+</Window>

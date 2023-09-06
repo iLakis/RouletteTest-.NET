@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roulette", "Roulette\Roulette.csproj", "{ABCA3BCE-AEFD-4F10-ABE1-C9106589EBA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RouletteTCP_Client", "RouletteTCP\RouletteTCP_Client.csproj", "{43FB52AF-5BB7-4F96-8417-336A9BB16619}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABCA3BCE-AEFD-4F10-ABE1-C9106589EBA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABCA3BCE-AEFD-4F10-ABE1-C9106589EBA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABCA3BCE-AEFD-4F10-ABE1-C9106589EBA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABCA3BCE-AEFD-4F10-ABE1-C9106589EBA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43FB52AF-5BB7-4F96-8417-336A9BB16619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43FB52AF-5BB7-4F96-8417-336A9BB16619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43FB52AF-5BB7-4F96-8417-336A9BB16619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43FB52AF-5BB7-4F96-8417-336A9BB16619}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {208B99D2-2F7F-41BB-847B-F6336862F5F1}
+	EndGlobalSection
+EndGlobal
